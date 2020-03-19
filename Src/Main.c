@@ -170,7 +170,8 @@ static inline void print_help() {
   printf(" mkdir           <directory>                create directory\n");
   printf(
       " copy_from_local <local file> <remote file> copy file from local fs\n");
-  printf(" copy_to_local   <local file> <remote file> copy file to local fs\n");
+  printf(" copy_to_local   <remote file> <local file> copy file to local "
+      "fs\n");
 }
 
 static inline void parse_args(int argc, char** argv) {
@@ -209,7 +210,7 @@ static inline void parse_args(int argc, char** argv) {
         break;
       }
       if (strcmp(argv[1], "copy_to_local") == 0) {
-        copy_to_local(argv[2], argv[3]);
+        copy_to_local(argv[3], argv[2]);
         break;
       }
       goto help;

@@ -144,7 +144,7 @@ Status api_copy_to_local(const char* local_path, const char* remote_path) {
       break;
   }
 
-  FILE* output = fopen(local_path, "rb");
+  FILE* output = fopen(local_path, "wb");
   fwrite(content, 1, content_length, output);
   fclose(output);
 
