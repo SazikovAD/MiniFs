@@ -92,8 +92,12 @@ int fs_api_exists(const char* path) {
 
   while (token != NULL) {
     if (current_type == 'f') {
+      int res = 0;
+      if(strtok(NULL, "/") == NULL) {
+        res = 1;
+      }
       free(buffer);
-      return 0;
+      return res;
     }
 
     uint32_t next_id = 0;

@@ -106,8 +106,9 @@ Status api_mkdir(const char* path) {
 
 Status api_copy_from_local(const char* local_path, const char* remote_path) {
   FILE* input = fopen(local_path, "rb");
-  fseek(input, 0, SEEK_SET);
+  fseek(input, 0, SEEK_END);
   size_t file_size = (size_t)ftell(input);
+  fseek(input, 0, SEEK_SET);
 
   char* buffer = malloc(file_size);
   fread(buffer, 1, file_size, input);
