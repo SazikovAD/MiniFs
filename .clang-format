@@ -1,0 +1,10 @@
+BasedOnStyle: Google
+IncludeCategories:
+  - Regex: '^<(MiniFs)/'
+    Priority: 1
+  - Regex: '<[[:alnum:].]+>'
+    Priority: 2
+  - Regex: '"[[:alnum:].]+"'
+    Priority: 0
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never

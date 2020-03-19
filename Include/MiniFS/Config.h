@@ -1,0 +1,22 @@
+//
+// Created by user on 13.03.2020.
+//
+
+#ifndef MINIFS_INCLUDE_MINIFS_CONFIG_H_
+#define MINIFS_INCLUDE_MINIFS_CONFIG_H_
+
+#define BLOCK_NUMBER 8388608u
+#define INODE_NUMBER 32768u
+
+#define BLOCK_SPACE 1024u
+#define BLOCK_SIZE 1028u
+#define INODE_SIZE 16u
+#define SUPER_BLOCK_SIZE 24u
+
+#define INODE_TABLE_SIZE 524288u
+#define BLOCK_TABLE_SIZE 8388608u
+
+#define FS_FILE_SIZE 8632401944ull
+#define FS_FILE_NAME "mini_fs.filesystem"
+
+#endif  // MINIFS_INCLUDE_MINIFS_CONFIG_H_
