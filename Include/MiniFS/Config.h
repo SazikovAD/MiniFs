@@ -17,6 +17,6 @@
 #define BLOCK_TABLE_SIZE 8388608u
 
 #define FS_FILE_SIZE 8632401944ull
-#define FS_FILE_NAME "mini_fs.filesystem"
+#define FS_FILE_NAME "/tmp/mini_fs.filesystem"
 
 #endif  // MINIFS_INCLUDE_MINIFS_CONFIG_H_
