@@ -135,6 +135,7 @@ void file_api_append(uint32_t inode_id, const raw_file* file, int* status) {
   fs_file_api_try_acquire_blocks(new_block_num, &acquired_blocks, blocks);
 
   if (acquired_blocks != new_block_num) {
+    free(blocks);
     *status = 1;
     return;
   }
@@ -170,6 +171,7 @@ void file_api_append(uint32_t inode_id, const raw_file* file, int* status) {
   i_node.file_size += file->file_size;
   fs_file_api_write_inode(inode_id, &i_node);
   *status = 0;
+  free(blocks);
 }
 
 void file_api_rewrite(uint32_t inode_id, const raw_file* file, int* status) {
